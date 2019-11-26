@@ -20,7 +20,7 @@ from learn import views as learn_views
 urlpatterns = [
     # path("", learn_views.index),
     path('', learn_views.index, name='home'),
-    path('add/', learn_views.add, name='add'),
-    path('add2/<int:a>/<int:b>', learn_views.add2, name='add2'),
+    path('add/<int:a>/<int:b>/', learn_views.old_add2_redirect),
+    path('new_add/<int:a>/<int:b>', learn_views.add2, name='add2'),
     path('admin/', admin.site.urls),
 ]
